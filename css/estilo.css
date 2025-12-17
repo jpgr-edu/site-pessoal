@@ -180,7 +180,7 @@ footer {
 
 header {
   background: linear-gradient(135deg, #ffffff, #a3a2a2);
-  color: #ffffff;
+  color: #050505;
   text-align: center;
   padding: 70px 20px 60px;
   position: relative;
@@ -397,4 +397,5 @@ body {
   color: #333;
 
 }
+
 
