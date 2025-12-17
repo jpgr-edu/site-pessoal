@@ -1,14 +1,11 @@
-const btn = document.getElementById("playMusic");
-const music = document.getElementById("bgMusic");
+const btn = document.getElementById("btnMusica");
+const player = document.getElementById("player");
+const nome = document.getElementById("nome");
 
 btn.addEventListener("click", () => {
-  if (music.paused) {
-    music.play().catch(() => {
-      alert("Clique novamente para liberar o áudio.");
-    });
-    btn.textContent = "⏸ Pausar";
-  } else {
-    music.pause();
-    btn.textContent = "▶ Música";
-  }
+  player.classList.remove("hidden"); // mostra player
+  nome.classList.add("tremor");       // ativa tremor
+  btn.style.display = "none";         // esconde botão
 });
+
+
