@@ -101,11 +101,79 @@
     </a>
   </div>
 </footer>
+  <script>
+  const img = document.getElementById("fotoPerfil");
+  const container = img.parentElement;
+
+  const size = 200; // tamanho da imagem
+  const pieces = 4; // 4x4 = 16 pedaços
+
+  function shatter() {
+    img.style.visibility = "hidden";
+
+    for (let y = 0; y < pieces; y++) {
+      for (let x = 0; x < pieces; x++) {
+        const piece = document.createElement("div");
+        piece.className = "fragment";
+
+        piece.style.left = `${(x * size) / pieces}px`;
+        piece.style.top = `${(y * size) / pieces}px`;
+
+        piece.style.backgroundImage = `url(${img.src})`;
+        piece.style.backgroundPosition = 
+          `-${(x * size) / pieces}px -${(y * size) / pieces}px`;
+
+        container.appendChild(piece);
+
+        // anima sair
+        piece.animate([
+          { transform: "translate(0,0)", opacity: 1 },
+          { 
+            transform: `translate(${(Math.random() - 0.5) * 160}px,
+                                   ${(Math.random() - 0.5) * 160}px)
+                        rotate(${(Math.random() - 0.5) * 90}deg)`,
+            opacity: 0
+          }
+        ], {
+          duration: 900,
+          easing: "ease-out",
+          fill: "forwards"
+        });
+
+        // voltar
+        setTimeout(() => {
+          piece.animate([
+            { 
+              transform: `translate(${(Math.random() - 0.5) * 160}px,
+                                     ${(Math.random() - 0.5) * 160}px)
+                          rotate(${(Math.random() - 0.5) * 90}deg)`,
+              opacity: 0
+            },
+            { transform: "translate(0,0)", opacity: 1 }
+          ], {
+            duration: 900,
+            easing: "ease-in",
+            fill: "forwards"
+          });
+        }, 900);
+
+        // limpar
+        setTimeout(() => piece.remove(), 1900);
+      }
+    }
+
+    setTimeout(() => img.style.visibility = "visible", 1900);
+  }
+
+  setInterval(shatter, 30000);
+</script>
+
 
 
 <script src="js/script.js"></script>
 </body>
 </html>
+
 
 
 
