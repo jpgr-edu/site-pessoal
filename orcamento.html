@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orçamento de Site</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0b0e13, #171c28);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+    }
+
+    .orcamento {
+      background: #ffffff;
+      max-width: 600px;
+      width: 100%;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    }
+
+    .orcamento h1 {
+      text-align: center;
+      margin-bottom: 8px;
+      color: #2a5298;
+    }
+
+    .orcamento p {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 0.95rem;
+      resize: none;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #4da3ff;
+      box-shadow: 0 0 0 2px rgba(77,163,255,0.2);
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 14px;
+      background: #4da3ff;
+      color: #fff;
+      border: none;
+      border-radius: 14px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #2a7de1;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 600px) {
+      .orcamento {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="orcamento">
+    <h1>Solicitar orçamento</h1>
+    <p>Preencha os dados abaixo para solicitar a criação do seu site.</p>
+
+    <form action="https://formsubmit.co/josepaulogois17@gmail.com" method="POST">
+
+      <!-- CONFIGURAÇÕES DO ENVIO -->
+      <input type="hidden" name="_subject" value="Novo pedido de site">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <label>Nome completo</label>
+      <input type="text" name="Nome" required>
+
+      <label>CPF</label>
+      <input type="text" name="CPF" placeholder="000.000.000-00" required>
+
+      <label>Endereço</label>
+      <input type="text" name="Endereço" required>
+
+      <label>WhatsApp</label>
+      <input type="text" name="WhatsApp" placeholder="(99) 99999-9999">
+
+      <label>Email</label>
+      <input type="email" name="Email">
+
+      <label>Como você imagina sua pagina </label>
+       <textarea 
+  name="Descrição do site" 
+  rows="6" 
+  required
+  placeholder="Exemplo: Quero um site institucional com página inicial, sobre, serviços e contato. O site será estático, sem banco de dados, apenas HTML, CSS e JavaScript.OBS; NÃO CRIO COM BANC0 DE DADOS!">
+</textarea>
+
+      <button type="submit">Enviar pedido</button>
+    </form>
+  </main>
+
+</body>
+</html>
