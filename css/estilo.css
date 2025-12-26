@@ -778,17 +778,6 @@ body {
 }
 
 /*            diminuir a foto e deixart ela quadrada           */
-@media (max-width: 768px) {
-  .foto {
-    width: 200px;
-    height: 200px;
-  }
-
-  .foto img {
-    border-radius: 0px; /* QUADRADA com cantos leves */
-    object-fit: cover;
-  }
-}
 
 
 
