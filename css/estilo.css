@@ -563,7 +563,7 @@ body {
 .foto img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: 0%;
   object-fit: cover;
 
   border: 4px solid rgba(255,255,255,0.95);
@@ -789,6 +789,7 @@ body {
     object-fit: cover;
   }
 }
+
 
 
 
