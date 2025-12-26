@@ -681,5 +681,104 @@ body {
 }
 
 
+/* ===============================
+   AJUSTE GLOBAL MOBILE
+================================ */
+@media (max-width: 768px) {
+
+  /* REMOVE MARGENS QUE QUEBRAM NO CELULAR */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    padding: 20px 15px;
+  }
+
+  /* PERFIL CENTRALIZADO */
+  .perfil {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: 30px 20px;
+    gap: 25px;
+  }
+
+  /* FOTO PERFIL MENOR */
+  .foto {
+    width: 200px;
+    height: 200px;
+  }
+
+  .perfil img,
+  .foto img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* TEXTO PERFIL */
+  .texto {
+    max-width: 100%;
+  }
+
+  .texto h2 {
+    font-size: 1.6rem;
+  }
+
+  .texto p {
+    font-size: 1rem;
+  }
+
+  /* SEÇÕES MAIS AJUSTADAS */
+  section,
+  .trabalhos {
+    padding: 30px 20px;
+    margin: 40px auto;
+  }
+
+  section h2,
+  .trabalhos h2 {
+    font-size: 1.6rem;
+    text-align: center;
+    border-left: none;
+  }
+
+  /* CARDS CENTRALIZADOS */
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    text-align: center;
+  }
+
+  /* BOTÕES DE CONTATO */
+  .contato-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-contato {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  /* BOTÃO DE MÚSICA NÃO ATRAPALHA */
+  .music {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .music button {
+    padding: 10px 14px;
+    font-size: 0.85rem;
+  }
+}
+
+
+
+
 
 
