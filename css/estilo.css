@@ -777,6 +777,13 @@ body {
   }
 }
 
+/*            diminuir a foto            */
+@media (max-width: 768px) {
+  .foto {
+    width: 180px;
+    height: 180px;
+  }
+}
 
 
 
