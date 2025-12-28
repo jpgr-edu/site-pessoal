@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>José Paulo | Portfólio</title>
-
+  
   <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
@@ -13,7 +13,6 @@
   <h1 class="tremor">José Paulo Gois</h1><br>
   <h5 class="tremor">Tecnologia • Educação • Desenvolvimento Web</h5>
 </header>
-
 
 <main>
  <section class="perfil">
@@ -30,37 +29,45 @@
   </div>
 </section>
 
-  <section>
-    <h2>🚀 Meus Trabalhos</h2>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Academia Fit</h3>
-        <p>Sistema web para gestão de academia.</p>
-        <a href="https://jpgr-edu.github.io/Proprietario-da-academia-fit/" target="_blank">Ver projeto</a>
-      </div>
 
-      <div class="card">
-        <h3>Estacionamento Park Fácil</h3>
-        <p>Controle simples de estacionamento.</p>
-        <a href="https://jpgr-edu.github.io/Estacionamento-park-facil/" target="_blank">Ver projeto</a>
-      </div>
 
-      <div class="card">
-        <h3>Câmbio de Pilas</h3>
-        <p>Conversor de moedas.</p>
-        <a href="https://jpgr-edu.github.io/Cambio-Pilas-Convertidas/" target="_blank">Ver projeto</a>
-      </div>
+  <section class="trabalhos">
+  <h2>🚀 Meus Trabalhos</h2>
 
-      <div class="card">
-        <h3>Shoppeando Comigo</h3>
-        <p>Site afiliado Shopee.</p>
-        <a href="https://shoopeeprodutosemalta-sudo.github.io/Shoppeando_Comigo/" target="_blank">Ver projeto</a>
-      </div>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Academia Fit</h3>
+      <p>Sistema web para gestão de academia.</p>
+      <a href="https://jpgr-edu.github.io/Proprietario-da-academia-fit/" target="_blank">Ver projeto</a>
     </div>
-  </section>
+
+    <div class="card">
+      <h3>Estacionamento Park Fácil</h3>
+      <p>Controle simples de estacionamento.</p>
+      <a href="https://jpgr-edu.github.io/Estacionamento-park-facil/" target="_blank">Ver projeto</a>
+    </div>
+
+    <div class="card">
+      <h3>Câmbio de Pilas</h3>
+      <p>Conversor de moedas.</p>
+      <a href="https://jpgr-edu.github.io/Cambio-Pilas-Convertidas/" target="_blank">Ver projeto</a>
+    </div>
+
+    <div class="card">
+      <h3>Shoppeando Comigo</h3>
+      <p>Site afiliado Shopee.</p>
+      <a href="https://shoopeeprodutosemalta-sudo.github.io/Shoppeando_Comigo/" target="_blank">Ver projeto</a>
+    </div>
+  </div>
+
+    
+</section>
+
 </main>
-  <!-- MÚSICA -->
+
+<!-- MÚSICA -->
 <section class="soundcloud-player">
   <iframe
     width="100%"
@@ -104,9 +111,9 @@
     Pagina de Orçamento
   </a>
   </div>
-
 </footer>
-  <script>
+
+<script>
   const img = document.getElementById("fotoPerfil");
   const container = img.parentElement;
 
@@ -172,48 +179,13 @@
 
   setInterval(shatter, 30000);
 </script>
-  <script>
-function enviarFormulario(event) {
-  event.preventDefault();
-
-  const form = event.target;
-
-  fetch(form.action, {
-    method: "POST",
-    body: new FormData(form),
-    headers: {
-      "Accept": "application/json"
-    }
-  })
-  .then(response => {
-    if (response.ok) {
-      form.reset();
-      form.style.display = "none";
-      document.getElementById("mensagem-sucesso").style.display = "block";
-      document.getElementById("novo-envio").style.display = "inline-block";
-    } else {
-      alert("Erro ao enviar. Tente novamente.");
-    }
-  })
-  .catch(() => {
-    alert("Falha de conexão.");
-  });
-
-  return false;
-}
-
-function novoFormulario() {
-  document.querySelector(".form-orcamento").style.display = "flex";
-  document.getElementById("mensagem-sucesso").style.display = "none";
-  document.getElementById("novo-envio").style.display = "none";
-}
-</script>
-
 
 
 <script src="js/script.js"></script>
 </body>
 </html>
+
+
 
 
 
