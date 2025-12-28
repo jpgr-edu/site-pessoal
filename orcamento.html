@@ -1,133 +1,89 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Orçamento de Site</title>
+  <title>Solicitar Orçamento | José Paulo</title>
 
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #0b0e13, #171c28);
-      min-height: 100vh;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #333;
-    }
-
-    .orcamento {
-      background: #ffffff;
-      max-width: 600px;
-      width: 100%;
-      padding: 40px;
-      border-radius: 18px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
-    }
-
-    .orcamento h1 {
-      text-align: center;
-      margin-bottom: 8px;
-      color: #2a5298;
-    }
-
-    .orcamento p {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 0.95rem;
-      color: #555;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    label {
-      font-weight: bold;
-      font-size: 0.9rem;
-    }
-
-    input, textarea {
-      padding: 12px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      font-size: 0.95rem;
-      resize: none;
-    }
-
-    input:focus, textarea:focus {
-      outline: none;
-      border-color: #4da3ff;
-      box-shadow: 0 0 0 2px rgba(77,163,255,0.2);
-    }
-
-    button {
-      margin-top: 20px;
-      padding: 14px;
-      background: #4da3ff;
-      color: #fff;
-      border: none;
-      border-radius: 14px;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background: #2a7de1;
-      transform: translateY(-2px);
-    }
-
-    @media (max-width: 600px) {
-      .orcamento {
-        padding: 25px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
 
-  <main class="orcamento">
-    <h1>Solicitar orçamento</h1>
-    <p>Preencha os dados abaixo para solicitar a criação do seu site.</p>
+<header class="header-animado">
+  <h1>Solicitação de Orçamento</h1>
+  <p>Vamos transformar sua ideia em um site profissional</p>
+</header>
 
-    <form action="https://formsubmit.co/josepaulogois17@gmail.com" method="POST">
+<main>
 
-      <!-- CONFIGURAÇÕES DO ENVIO -->
-      <input type="hidden" name="_subject" value="Novo pedido de site">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
+  <!-- INTRO -->
+  <section class="perfil">
+    <div class="texto">
+      <h2>📄 Como funciona?</h2>
+      <p>
+        Preencha o formulário abaixo com o máximo de detalhes possível.
+        Com base nas informações, entrarei em contato com um orçamento
+        personalizado para o seu projeto.
+      </p>
+    </div>
+  </section>
 
-      <label>Nome completo</label>
-      <input type="text" name="Nome" required>
+  <!-- FORMULÁRIO -->
+  <section class="trabalhos">
+    <h2>🧾 Dados do Projeto</h2>
 
-      <label>CPF</label>
-      <input type="text" name="CPF" placeholder="000.000.000-00" required>
+    <form class="form-orcamento">
 
-      <label>Endereço</label>
-      <input type="text" name="Endereço" required>
+      <div class="campo">
+        <label>Nome completo</label>
+        <input type="text" placeholder="Seu nome" required>
+      </div>
 
-      <label>WhatsApp</label>
-      <input type="text" name="WhatsApp" placeholder="(99) 99999-9999">
+      <div class="campo">
+        <label>CPF</label>
+        <input type="text" placeholder="000.000.000-00" required>
+      </div>
 
-      <label>Email</label>
-      <input type="email" name="Email">
+      <div class="campo">
+        <label>Endereço</label>
+        <input type="text" placeholder="Cidade / Estado" required>
+      </div>
 
-      <label>Como você imagina sua pagina </label>
-       <textarea 
-  name="Descrição do site" 
-  rows="6" 
-  required
-  placeholder="Exemplo: Quero um site institucional com página inicial, sobre, serviços e contato. O site será estático, sem banco de dados, apenas HTML, CSS e JavaScript.OBS; NÃO CRIO COM BANC0 DE DADOS!">
-</textarea>
+      <div class="campo">
+        <label>Contato (WhatsApp ou E-mail)</label>
+        <input type="text" placeholder="Ex: (87) 9xxxx-xxxx" required>
+      </div>
 
-      <button type="submit">Enviar pedido</button>
+      <div class="campo">
+        <label>Descreva como você imagina seu site</label>
+        <textarea rows="6" placeholder="Ex: Site institucional, páginas sem banco de dados, cores claras..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn-orcamento">
+        Enviar solicitação
+      </button>
+
     </form>
-  </main>
+  </section>
+
+</main>
+
+<footer class="contato">
+  <h2>Prefere falar direto?</h2>
+
+  <div class="contato-links">
+    <a class="btn-contato whatsapp" href="https://wa.me/558781223814" target="_blank">
+      💬 WhatsApp
+    </a>
+
+    <a class="btn-contato gmail"
+       href="https://mail.google.com/mail/?view=cm&fs=1&to=jpgr@discente.ifpe.edu.br"
+       target="_blank">
+      📧 E-mail
+    </a>
+  </div>
+</footer>
 
 </body>
 </html>
