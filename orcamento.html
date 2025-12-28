@@ -33,38 +33,44 @@
   <section class="trabalhos">
     <h2>🧾 Dados do Projeto</h2>
 
-    <form class="form-orcamento">
+    <form
+  class="form-orcamento"
+  action="https://formspree.io/f/xpzgabcd"
+  method="POST"
+  onsubmit="return enviarFormulario(event)"
+>
 
-      <div class="campo">
-        <label>Nome completo</label>
-        <input type="text" placeholder="Seu nome" required>
-      </div>
+  <input type="hidden" name="_subject" value="Novo orçamento pelo site">
 
-      <div class="campo">
-        <label>CPF</label>
-        <input type="text" placeholder="000.000.000-00" required>
-      </div>
+  <div class="campo">
+    <label>Nome completo</label>
+    <input type="text" name="nome" required>
+  </div>
 
-      <div class="campo">
-        <label>Endereço</label>
-        <input type="text" placeholder="Cidade / Estado" required>
-      </div>
+  <div class="campo">
+    <label>CPF</label>
+    <input type="text" name="cpf" required>
+  </div>
 
-      <div class="campo">
-        <label>Contato (WhatsApp ou E-mail)</label>
-        <input type="text" placeholder="Ex: (87) 9xxxx-xxxx" required>
-      </div>
+  <div class="campo">
+    <label>Endereço</label>
+    <input type="text" name="endereco" required>
+  </div>
 
-      <div class="campo">
-        <label>Descreva como você imagina seu site</label>
-        <textarea rows="6" placeholder="Ex: Site institucional, páginas sem banco de dados, cores claras..." required></textarea>
-      </div>
+  <div class="campo">
+    <label>Contato</label>
+    <input type="text" name="contato" required>
+  </div>
 
-      <button type="submit" class="btn-orcamento">
-        Enviar solicitação
-      </button>
+  <div class="campo">
+    <label>Descrição do site</label>
+    <textarea name="descricao" rows="6" required></textarea>
+  </div>
 
-    </form>
+  <button type="submit" class="btn-orcamento">
+    Enviar solicitação
+  </button>
+</form>
   </section>
 
 </main>
@@ -87,3 +93,4 @@
 
 </body>
 </html>
+
