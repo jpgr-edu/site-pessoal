@@ -172,12 +172,49 @@
 
   setInterval(shatter, 30000);
 </script>
+  <script>
+function enviarFormulario(event) {
+  event.preventDefault();
+
+  const form = event.target;
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: {
+      "Accept": "application/json"
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      form.reset();
+      form.style.display = "none";
+      document.getElementById("mensagem-sucesso").style.display = "block";
+      document.getElementById("novo-envio").style.display = "inline-block";
+    } else {
+      alert("Erro ao enviar. Tente novamente.");
+    }
+  })
+  .catch(() => {
+    alert("Falha de conexão.");
+  });
+
+  return false;
+}
+
+function novoFormulario() {
+  document.querySelector(".form-orcamento").style.display = "flex";
+  document.getElementById("mensagem-sucesso").style.display = "none";
+  document.getElementById("novo-envio").style.display = "none";
+}
+</script>
 
 
 
 <script src="js/script.js"></script>
 </body>
 </html>
+
 
 
 
