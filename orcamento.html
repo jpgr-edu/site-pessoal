@@ -7,94 +7,153 @@
   <title>Orçamento de Site</title>
 
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #0b0e13, #171c28);
-      min-height: 100vh;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #333;
-    }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    /* FUNDO COM CÓDIGO */
+    background:
+      linear-gradient(rgba(8,12,25,0.85), rgba(8,12,25,0.85)),
+      url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4");
+    background-size: cover;
+    background-position: center;
+    color: #e5e7eb;
+  }
+
+  .orcamento {
+    max-width: 600px;
+    width: 100%;
+    padding: 40px;
+
+    /* CARD ESCURO TRANSLÚCIDO */
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+
+    box-shadow:
+      0 20px 40px rgba(0,0,0,0.6),
+      inset 0 1px 0 rgba(255,255,255,0.05);
+  }
+
+  .orcamento h1 {
+    text-align: center;
+    margin-bottom: 8px;
+    color: #3b82f6;
+  }
+
+  .orcamento p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+    color: #cbd5f5;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  label {
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: #e5e7eb;
+  }
+
+  input, textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 0.9rem;
+    resize: none;
+
+    background: #f8fafc;
+    color: #111827;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #6b7280;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #3b82f6;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 14px;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(59,130,246,0.5);
+  }
+
+  @media (max-width: 600px) {
     .orcamento {
-      background: #ffffff;
-      max-width: 600px;
-      width: 100%;
-      padding: 40px;
-      border-radius: 18px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+      padding: 25px;
     }
+  }
+ .btn-whatsapp {
+  display: inline-block;
+  padding: 7px 16px;          /* ↓ menor */
+  background: #16a34a;
+  color: #fff;
+  font-weight: 600;           /* ↓ menos pesado */
+  font-size: 0.85rem;         /* ↓ texto menor */
+  border-radius: 999px;
+  text-decoration: none;
+  transition: 0.3s;
+}
 
-    .orcamento h1 {
-      text-align: center;
-      margin-bottom: 8px;
-      color: #2a5298;
-    }
+.btn-whatsapp:hover {
+  background: #15803d;
+  transform: translateY(-1px); /* ↓ menos “salto” */
+  box-shadow: 0 6px 14px rgba(22,163,74,0.35);
+}
+.contato-direto {
+  margin-top: 30px;
+  text-align: center;   /* centraliza tudo */
+}
 
-    .orcamento p {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 0.95rem;
-      color: #555;
-    }
+.btn-whatsapp {
+  margin: 0 auto;       /* garante centro */
+}
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
 
-    label {
-      font-weight: bold;
-      font-size: 0.9rem;
-    }
+</style>
 
-    input, textarea {
-      padding: 12px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      font-size: 0.95rem;
-      resize: none;
-    }
-
-    input:focus, textarea:focus {
-      outline: none;
-      border-color: #4da3ff;
-      box-shadow: 0 0 0 2px rgba(77,163,255,0.2);
-    }
-
-    button {
-      margin-top: 20px;
-      padding: 14px;
-      background: #4da3ff;
-      color: #fff;
-      border: none;
-      border-radius: 14px;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background: #2a7de1;
-      transform: translateY(-2px);
-    }
-
-    @media (max-width: 600px) {
-      .orcamento {
-        padding: 25px;
-      }
-    }
-  </style>
 </head>
 <body>
 
   <main class="orcamento">
     <h1>Solicitar orçamento</h1>
     <p>Preencha os dados abaixo para solicitar a criação do seu site.</p>
+
+    <div class="como-funciona">
+      <h2>Como funciona?</h2>
+      <p>
+      Preencha o formulário abaixo com os detalhes do seu projeto.
+      Com base nas informações, entrarei em contato com um orçamento
+      personalizado para seu site.
+      </p>
+    </div>
+
 
     <form action="https://formsubmit.co/josepaulogois17@gmail.com" method="POST">
 
@@ -128,10 +187,23 @@
 
       <button type="submit">Enviar pedido</button>
     </form>
+    <div class="contato-direto">
+      <p>Prefere falar direto?</p>
+
+      <a 
+      href="https://wa.me/5599999999999" 
+      target="_blank" 
+      class="btn-whatsapp"
+      >
+      💬 Falar no WhatsApp
+    </a>
+    </div>
+
   </main>
 
 </body>
 </html>
+
 
 
 
