@@ -1,198 +1,151 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>José Paulo | Portfólio</title>
-  
-  <link rel="stylesheet" href="css/estilo.css">
-</head>
-<body>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tecnologia com Propósito</title>
 
-<header class="header-animado">
-  <h1 class="tremor">Jose Paulo</h1><br>
-  <h5 class="tremor">Tecnologia • Educação • Desenvolvimento Web</h5>
-</header>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-<main>
- <section class="trabalhos">
-  <div class="fumaca"></div>
-  <div class="raio"></div>
+.hero{
+    height:100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("img/fundoooooo.png"); /* sua imagem de fundo */
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 8%;
+    color:white;
+}
 
-  <div class="texto">
-    <h2>Tecnologia com propósito.</h2>
-    <p>Aplicando tecnologia para resolver problemas reais..</p>
-  </div>
+.hero-text{
+    max-width:600px;
+}
 
-</section >
+.hero-text h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
 
- <section class="trabalhos">
-  <h2>🚀 Aulas sobre conteúdos de programação</h2>
-  <di>
-    <a href="videoaulas.html" 
-    class="btn-orcamento"> 
-    VER VIDEO AULAS 
-  </a>
-    
-  </di>
+.hero-text p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+    color:#e0e0e0;
+}
 
-</section>
+.btn{
+    padding:14px 30px;
+    background:#007bff;
+    border:none;
+    border-radius:8px;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0056b3;
+    transform:translateY(-3px);
+}
+
+/* SUA FOTO RECORTADA */
+.hero-image img{
+    height:45vh;
+    object-fit:contain;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
+}
 
 
-  <section class="trabalhos">
-  <h2>🚀 Meus Trabalhos</h2>
-
-
-  <div class="cards">
-    <div class="card">
-      <h3>Academia Fit</h3>
-      <p>Sistema web para gestão de academia.</p>
-      <a href="https://jpgr-edu.github.io/Proprietario-da-academia-fit/" target="_blank">Ver projeto</a>
-    </div>
-
-    <div class="card">
-      <h3>Estacionamento Park Fácil</h3>
-      <p>Controle simples de estacionamento.</p>
-      <a href="https://jpgr-edu.github.io/Estacionamento-park-facil/" target="_blank">Ver projeto</a>
-    </div>
-
-    <div class="card">
-      <h3>Câmbio de Pilas</h3>
-      <p>Conversor de moedas.</p>
-      <a href="https://jpgr-edu.github.io/Cambio-Pilas-Convertidas/" target="_blank">Ver projeto</a>
-    </div>
-
-    <div class="card">
-      <h3>Shoppeando Comigo</h3>
-      <p>Site afiliado Shopee.</p>
-      <a href="https://shoopeeprodutosemalta-sudo.github.io/Shoppeando_Comigo/" target="_blank">Ver projeto</a>
-    </div>
-  </div>
-
-    
-</section>
-
-</main>
-
-<!-- MÚSICA -->
-<section class="soundcloud-player">
-  <iframe
-    width="100%"
-    height="166"
-    scrolling="no"
-    frameborder="no"
-    allow="autoplay"
-    src="https://w.soundcloud.com/player/?url=https://soundcloud.com/sigmaaudios/luna&color=%232a5298&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false">
-  </iframe>
-</section>
-
-<footer class="contato">
-  <h2>Entre em contato</h2>
-
-  <div class="contato-links">
-    <a
-      class="btn-contato gmail"
-      href="https://mail.google.com/mail/?view=cm&fs=1&to=jpgr@discente.ifpe.edu.br"
-      target="_blank"
-    >
-      📧 Enviar e-mail
-    </a>
-
-    <a
-      class="btn-contato instagram"
-      href="https://www.instagram.com/paulinho_gois"
-      target="_blank"
-    >
-      📸 Instagram
-    </a>
-
-    <a
-      class="btn-contato whatsapp"
-      href="https://wa.me/558781223814"
-      target="_blank"
-    >
-      💬 WhatsApp
-    </a>
-    <a href="orcamento.html" 
-    class="btn-orcamento"> 
-    Pagina de Orçamento
-  </a>
-    <a href="pagina_principal.html" 
-    class="btn-orcamento"> 
-    Voltar a Pagina Inicial 
-  </a>
-  </div>
-   
-</footer>
-
-<script>
-  const img = document.getElementById("fotoPerfil");
-  const container = img.parentElement;
-
-  const size = 200; // tamanho da imagem
-  const pieces = 4; // 4x4 = 16 pedaços
-
-  function shatter() {
-    img.style.visibility = "hidden";
-
-    for (let y = 0; y < pieces; y++) {
-      for (let x = 0; x < pieces; x++) {
-        const piece = document.createElement("div");
-        piece.className = "fragment";
-
-        piece.style.left = `${(x * size) / pieces}px`;
-        piece.style.top = `${(y * size) / pieces}px`;
-
-        piece.style.backgroundImage = `url(${img.src})`;
-        piece.style.backgroundPosition = 
-          `-${(x * size) / pieces}px -${(y * size) / pieces}px`;
-
-        container.appendChild(piece);
-
-        // anima sair
-        piece.animate([
-          { transform: "translate(0,0)", opacity: 1 },
-          { 
-            transform: `translate(${(Math.random() - 0.5) * 160}px,
-                                   ${(Math.random() - 0.5) * 160}px)
-                        rotate(${(Math.random() - 0.5) * 90}deg)`,
-            opacity: 0
-          }
-        ], {
-          duration: 900,
-          easing: "ease-out",
-          fill: "forwards"
-        });
-
-        // voltar
-        setTimeout(() => {
-          piece.animate([
-            { 
-              transform: `translate(${(Math.random() - 0.5) * 160}px,
-                                     ${(Math.random() - 0.5) * 160}px)
-                          rotate(${(Math.random() - 0.5) * 90}deg)`,
-              opacity: 0
-            },
-            { transform: "translate(0,0)", opacity: 1 }
-          ], {
-            duration: 900,
-            easing: "ease-in",
-            fill: "forwards"
-          });
-        }, 900);
-
-        // limpar
-        setTimeout(() => piece.remove(), 1900);
-      }
+/* RESPONSIVO */
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:60px;
     }
 
-    setTimeout(() => img.style.visibility = "visible", 1900);
-  }
+    .hero-image img{
+        height:60vh;
+        margin-top:20px;
+    }
+}
+.hero-text{
+    max-width:600px;
+    animation: fadeInLeft 1s ease forwards;
+}
 
-  setInterval(shatter, 30000);
-</script>
+.hero-image{
+    animation: fadeInRight 1.2s ease forwards;
+}
+
+@keyframes fadeInLeft{
+    from{
+        opacity:0;
+        transform:translateX(-40px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes fadeInRight{
+    from{
+        opacity:0;
+        transform:translateX(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+.btn{
+    padding:14px 30px;
+    background:linear-gradient(45deg,#007bff,#00c6ff);
+    border:none;
+    border-radius:30px;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    transition:0.3s;
+    text-decoration:none;   /* REMOVE A LINHA */
+    display:inline-block;   /* deixa igual botão */
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    text-decoration:none;
+}
 
 
-<script src="js/script.js"></script>
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Tecnologia com propósito.</h1>
+        <p>Tecnologia aplicada com estratégia, eficiência e propósito.</p>
+        <a href="index.html" target="_blank" class="btn">Saiba Mais</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="img/WhatsApp Sticker 2026-02-18 at 22.06.14
+        " alt="José Paulo">
+    </div>
+</section>
+
 </body>
 </html>
