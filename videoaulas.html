@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orçamento de Site</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+<header class="header-animado">
+  <h1 class="tremor">Jose Paulo</h1><br>
+  <h5 class="tremor">Tecnologia • Educação • Desenvolvimento Web</h5>
+</header>
+
+<main>
+ <section class="trabalhos">
+  <h2>🚀 AULAS DE BANCO DE DADOS COM MySQL</h2>
+
+  <div class="card">
+    <h3>Aula 01 – Banco de dados com MySQL Workbench 8.0 CE</h3>
+    <p>O que é um Banco de Dados?</p>
+    <a href="https://youtu.be/Ofktsne-utM?si=S2KamS9ggHz3VdZI" target="_blank">Ver vídeo</a>
+  </div>
+
+  <div class="card">
+    <h3>Aula 02 – Banco de dados com MySQL Workbench 8.0 CE</h3>
+    <p>Instalando o MySQL com WAMP</p>
+    <a href="https://youtu.be/5JbAOWJbgIA?si=_oA7CKvXO7ovsow1" target="_blank">Ver vídeo</a>
+    <a href="https://youtu.be/R2HrwSQ6EPM?si=DmTku0tM-DHHcwMQ" target="_blank">Ver vídeo</a>
+  </div>
+
+  <div class="card">
+    <h3>Aula 03 – Banco de dados com MySQL Workbench 8.0 CE</h3>
+    <p> Instalando o XAMPP</p>
+    <a href="https://youtu.be/m9YPlX0fcJk?si=LStaz6d7ohYV1YWh" target="_blank">Ver vídeo</a>
+  </div>
+
+  <div class="card">
+    <h3>Aula 04 – Banco de dados com MySQL Workbench 8.0 CE</h3>
+    <p> Criando o primeiro Banco de Dados</p>
+    <a href="https://youtu.be/cHLKtALWDos?si=3o5zPJnr7rlUvn6h" target="_blank">Ver vídeo</a>
+  </div>
+
+  <div class="card">
+    <h3>Aula 05 – Banco de dados com MySQL Workbench 8.0 CE</h3>
+    <p>Melhorando a Estrutura do Banco de Dados</p>
+    <a href="https://youtu.be/NCG9niOlm40?si=Nn7Y5wKsE-5dT3-I" target="_blank">Ver vídeo</a>
+  </div>
+  
+  <div class="card">
+    <h3>Aula 06 – Banco de dados com MySQL Workbench 8.0 CE</h3>
+    <p> Inserindo Dados na Tabela (INSERT INTO)<p>
+    <a href="https://youtu.be/To9qUcEMuY0?si=hSpgHTuGrIyO5AcX" target="_blank">Ver vídeo</a>
+  </div>
+
+  <di>
+    <a href="index.html" 
+    class="btn-orcamento"> 
+    Voltar a Pagina Inicial 
+  </a>
+  </di>
+</section>
+
+<section class="trabalhos">
+  <h2>🚀 AULAS DE HTML 5 ,JavaScript e CSS</h2>
+
+  <di>
+    <a href="index.html" 
+    class="btn-orcamento"> 
+    Voltar a Pagina Inicial 
+  </a>
+  </di>
+</section>
+</main>
+
+
+<footer class="contato">
+  <h2>Entre em contato</h2>
+
+  <div class="contato-links">
+    <a
+      class="btn-contato gmail"
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=jpgr@discente.ifpe.edu.br"
+      target="_blank"
+    >
+      📧 Enviar e-mail
+    </a>
+
+    <a
+      class="btn-contato instagram"
+      href="https://www.instagram.com/paulinho_gois"
+      target="_blank"
+    >
+      📸 Instagram
+    </a>
+
+    <a
+      class="btn-contato whatsapp"
+      href="https://wa.me/558781223814"
+      target="_blank"
+    >
+      💬 WhatsApp
+    </a>
+    <a href="orcamento.html" 
+    class="btn-orcamento"> 
+    Pagina de Orçamento
+  </a>
+  </div>
+</footer>
+
+<script>
+  const img = document.getElementById("fotoPerfil");
+  const container = img.parentElement;
+
+  const size = 200; // tamanho da imagem
+  const pieces = 4; // 4x4 = 16 pedaços
+
+  function shatter() {
+    img.style.visibility = "hidden";
+
+    for (let y = 0; y < pieces; y++) {
+      for (let x = 0; x < pieces; x++) {
+        const piece = document.createElement("div");
+        piece.className = "fragment";
+
+        piece.style.left = `${(x * size) / pieces}px`;
+        piece.style.top = `${(y * size) / pieces}px`;
+
+        piece.style.backgroundImage = `url(${img.src})`;
+        piece.style.backgroundPosition = 
+          `-${(x * size) / pieces}px -${(y * size) / pieces}px`;
+
+        container.appendChild(piece);
+
+        // anima sair
+        piece.animate([
+          { transform: "translate(0,0)", opacity: 1 },
+          { 
+            transform: `translate(${(Math.random() - 0.5) * 160}px,
+                                   ${(Math.random() - 0.5) * 160}px)
+                        rotate(${(Math.random() - 0.5) * 90}deg)`,
+            opacity: 0
+          }
+        ], {
+          duration: 900,
+          easing: "ease-out",
+          fill: "forwards"
+        });
+
+        // voltar
+        setTimeout(() => {
+          piece.animate([
+            { 
+              transform: `translate(${(Math.random() - 0.5) * 160}px,
+                                     ${(Math.random() - 0.5) * 160}px)
+                          rotate(${(Math.random() - 0.5) * 90}deg)`,
+              opacity: 0
+            },
+            { transform: "translate(0,0)", opacity: 1 }
+          ], {
+            duration: 900,
+            easing: "ease-in",
+            fill: "forwards"
+          });
+        }, 900);
+
+        // limpar
+        setTimeout(() => piece.remove(), 1900);
+      }
+    }
+
+    setTimeout(() => img.style.visibility = "visible", 1900);
+  }
+
+  setInterval(shatter, 30000);
+</script>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
