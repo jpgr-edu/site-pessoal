@@ -17,7 +17,7 @@
     height:100vh;
     background:
         linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url("img/fundoooooo.png"); /* sua imagem de fundo */
+        url("img/fundoooooo.png");
     background-size:cover;
     background-position:center;
     display:flex;
@@ -29,6 +29,7 @@
 
 .hero-text{
     max-width:600px;
+    animation: fadeInLeft 1s ease forwards;
 }
 
 .hero-text h1{
@@ -44,48 +45,25 @@
 
 .btn{
     padding:14px 30px;
-    background:#007bff;
+    background:linear-gradient(45deg,#007bff,#00c6ff);
     border:none;
-    border-radius:8px;
+    border-radius:30px;
     color:white;
     font-size:1rem;
     cursor:pointer;
     transition:0.3s;
+    text-decoration:none;
+    display:inline-block;
 }
 
 .btn:hover{
-    background:#0056b3;
-    transform:translateY(-3px);
+    transform:scale(1.05);
 }
 
-/* SUA FOTO RECORTADA */
 .hero-image img{
     height:45vh;
     object-fit:contain;
     filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
-}
-
-
-/* RESPONSIVO */
-@media(max-width:900px){
-    .hero{
-        flex-direction:column;
-        text-align:center;
-        padding-top:60px;
-    }
-
-    .hero-image img{
-        height:60vh;
-        margin-top:20px;
-    }
-}
-.hero-text{
-    max-width:600px;
-    animation: fadeInLeft 1s ease forwards;
-}
-
-.hero-image{
-    animation: fadeInRight 1.2s ease forwards;
 }
 
 @keyframes fadeInLeft{
@@ -110,25 +88,22 @@
     }
 }
 
-.btn{
-    padding:14px 30px;
-    background:linear-gradient(45deg,#007bff,#00c6ff);
-    border:none;
-    border-radius:30px;
-    color:white;
-    font-size:1rem;
-    cursor:pointer;
-    transition:0.3s;
-    text-decoration:none;   /* REMOVE A LINHA */
-    display:inline-block;   /* deixa igual botão */
+.hero-image{
+    animation: fadeInRight 1.2s ease forwards;
 }
 
-.btn:hover{
-    transform:scale(1.05);
-    text-decoration:none;
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:60px;
+    }
+
+    .hero-image img{
+        height:60vh;
+        margin-top:20px;
+    }
 }
-
-
 </style>
 </head>
 
@@ -138,12 +113,11 @@
     <div class="hero-text">
         <h1>Tecnologia com propósito.</h1>
         <p>Tecnologia aplicada com estratégia, eficiência e propósito.</p>
-        <a href="pagina_principal.html" target="_blank" class="btn">Saiba Mais</a>
+        <a href="index.html" class="btn" target="_blank">Saiba Mais</a>
     </div>
 
     <div class="hero-image">
-        <img src="img/WhatsApp Sticker 2026-02-18 at 22.06.14
-        " alt="José Paulo">
+        <img src="img/imagemdemim.14" alt="José Paulo">
     </div>
 </section>
 
