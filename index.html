@@ -1,152 +1,151 @@
-<!DOCTYPE html >
-< html  lang =" pt-br " >
-< cabeçalho >
-< meta  charset =" UTF-8 " >
-< meta  name =" viewport " content =" width=device-width, initial-scale=1.0 " >
-< title > Tecnologia com Propósito </ title >
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tecnologia com Propósito</title>
 
-< estilo >
-* {
-    margem : 0 ;
-    preenchimento : 0 ;
-    box-sized : caixa de borda;
-    família de fontes : Arial , Helvetica , sans-serif;
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-. herói {
-    altura : 100 vh ;
-    fundo :
-        gradiente-linear ( rgba ( 0 , 0 , 0 , 0.6 ) ,  rgba ( 0 , 0 , 0 , 0.6 )) ,
-        url ( "img/fundooooo.png" ); /* sua imagem de fundo */
-    tamanho de fundo : cobrir;
-    background-position : center;
-    exibição : flexível;
-    alinhar-itens : centro;
-    justify-content : espaço-entre;
-    preenchimento : 0  8 % ;
-    Cor : branca;
+.hero{
+    height:100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("img/fundoooooo.png"); /* sua imagem de fundo */
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 8%;
+    color:white;
 }
 
-. texto-do-herói {
-    largura máxima : 600 px ;
+.hero-text{
+    max-width:600px;
 }
 
-. hero-text  h1 {
-    tamanho da fonte : 3 rem ;
-    margem-inferior : 20 px ;
+.hero-text h1{
+    font-size:3rem;
+    margin-bottom:20px;
 }
 
-. texto-herói  p {
-    tamanho da fonte : 1,2 rem ;
-    margem-inferior : 30 px ;
-    cor : # e0e0e0 ;
+.hero-text p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+    color:#e0e0e0;
 }
 
-. botão {
-    preenchimento : 14 px  30 px ;
-    fundo : # 007bff ;
-    borda : nenhuma;
-    raio-da-borda : 8 px ;
-    Cor : branca;
-    tamanho da fonte : 1 rem ;
-    cursor : ponteiro;
-    transição : 0,3 s ;
+.btn{
+    padding:14px 30px;
+    background:#007bff;
+    border:none;
+    border-radius:8px;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-. btn : passar o mouse {
-    fundo : # 0056b3 ;
-    transformar : traduzirY ( -3 px );
+.btn:hover{
+    background:#0056b3;
+    transform:translateY(-3px);
 }
 
 /* SUA FOTO RECORTADA */
-. imagem-do-herói  img {
-    altura : 45 vh ;
-    ajuste-do-objeto : conter;
-    filtro :  sombra-projetada ( 0  20 px  40 px  rgba ( 0 , 0 , 0 , 0.6 ));
+.hero-image img{
+    height:45vh;
+    object-fit:contain;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
 }
 
 
 /* RESPONSIVO */
-@media ( max-width : 900 px ){
-    . herói {
-        flex-direction : coluna;
-        alinhamento-do-texto : centralizado;
-        padding-top : 60 px ;
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:60px;
     }
 
-    . imagem-do-herói  img {
-        altura : 60 vh ;
-        margem superior : 20 px ;
+    .hero-image img{
+        height:60vh;
+        margin-top:20px;
     }
 }
-. texto-do-herói {
-    largura máxima : 600 px ;
-    animação : fadeInLeft 1 s suavizar para a frente;
+.hero-text{
+    max-width:600px;
+    animation: fadeInLeft 1s ease forwards;
 }
 
-. imagem-do-herói {
-    animação : fadeInRight 1.2 s suavização para a frente;
+.hero-image{
+    animation: fadeInRight 1.2s ease forwards;
 }
 
 @keyframes fadeInLeft{
-    de {
-        opacidade : 0 ;
-        transformar : traduzirX ( -40 px );
+    from{
+        opacity:0;
+        transform:translateX(-40px);
     }
-    para {
-        opacidade : 1 ;
-        transformar : traduzirX ( 0 );
+    to{
+        opacity:1;
+        transform:translateX(0);
     }
 }
 
 @keyframes fadeInRight{
-    de {
-        opacidade : 0 ;
-        transformar : traduzirX ( 40 px );
+    from{
+        opacity:0;
+        transform:translateX(40px);
     }
-    para {
-        opacidade : 1 ;
-        transformar : traduzirX ( 0 );
+    to{
+        opacity:1;
+        transform:translateX(0);
     }
 }
 
-. botão {
-    preenchimento : 14 px  30 px ;
-    fundo : gradiente-linear ( 45 graus , # 007bff , # 00c6ff );
-    borda : nenhuma;
-    raio da borda : 30 px ;
-    Cor : branca;
-    tamanho da fonte : 1 rem ;
-    cursor : ponteiro;
-    transição : 0,3 s ;
-    text-decoration : none;    /* REMOVER UMA LINHA */
-    display : bloco embutido;    /* deixa o mesmo botão */
+.btn{
+    padding:14px 30px;
+    background:linear-gradient(45deg,#007bff,#00c6ff);
+    border:none;
+    border-radius:30px;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    transition:0.3s;
+    text-decoration:none;   /* REMOVE A LINHA */
+    display:inline-block;   /* deixa igual botão */
 }
 
-. btn : passar o mouse {
-    transformar : escala ( 1.05 );
-    decoração-de-texto : nenhuma;
+.btn:hover{
+    transform:scale(1.05);
+    text-decoration:none;
 }
 
 
-</ estilo >
-</head>​​
+</style>
+</head>
 
-< corpo >
+<body>
 
-< section  class =" hero " >
-    < div  class =" hero-text " >
-        < h1 > Tecnologia com propósito. </ h1 >
-        < p > Tecnologia aplicada com estratégia, eficiência e propósito. </ p >
-        <a href="pagina_principal.html" target="_blank" class="btn"> Saiba Mais </a>​ ​​​​​​​​​​​​​​
-    </div>​​
+<section class="hero">
+    <div class="hero-text">
+        <h1>Tecnologia com propósito.</h1>
+        <p>Tecnologia aplicada com estratégia, eficiência e propósito.</p>
+        <a href="pagina_principal.html" target="_blank" class="btn">Saiba Mais</a>
+    </div>
 
-    < div  class =" hero-image " >
-        < img  src =" img/WhatsApp Sticker 2026-02-18 às 22:06:14
-        " alt =" José Paulo " >
-    </div>​​
-</ seção >
+    <div class="hero-image">
+        <img src="img/WhatsApp Sticker 2026-02-18 at 22.06.14
+        " alt="José Paulo">
+    </div>
+</section>
 
-</body>​​
-</ html >
-
+</body>
+</html>
